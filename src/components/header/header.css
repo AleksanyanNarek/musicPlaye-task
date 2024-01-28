@@ -1,0 +1,75 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background-image: linear-gradient(#F2F2F2, #DEDEDE);
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+}
+
+.header > div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header button {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding: 0;
+    gap: 0.25rem;
+    margin: 0 auto;
+}
+
+.headerButton-content {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0 0.5rem;
+}
+
+.header .arrow-down {
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    border-left: var(--border);
+}
+
+.headerButton-trackNumber .headerButton-content {
+    padding-right: 0;
+}
+
+.headerButton-trackNumber .arrow-down {
+    border: none;
+    padding-left: 0;
+}
+
+.header-searchBar {
+    display: flex;
+    align-items: center;
+    border-radius: 1.5rem;
+    border: var(--border);
+    background-color: white;
+    padding: 0 0.5rem;
+    margin: 0 auto;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.header-searchBar input {
+    background-color: transparent;
+}
+
+.header-searchBar:has(input:focus), .header-searchBar:hover {
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2), var(--hover-shadow);
+}
+
+@media (max-width: 650px){
+    .header {
+        flex-direction: column-reverse;
+    }
+}

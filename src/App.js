@@ -1,25 +1,22 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import Header from './components/header/Header';
+import MusicUploadForm from './components/musicUploadForm/MusicUploadForm';
+import SongList from './components/songList/SongList';
+
+import { songsData } from './data';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const [songListData, setSongListData] = useState(songsData);
+
+    return (
+        <div className='app'>
+            <Header />
+            <SongList songListData={songListData} />
+            <MusicUploadForm setSongListData={setSongListData} />
+        </div>
+    );
 }
 
 export default App;

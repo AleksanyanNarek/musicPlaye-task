@@ -1,0 +1,33 @@
+.songRow {
+    border-bottom: var(--border);
+    transition: var(--hover-transition);
+}
+
+.songRow:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.songRow td {
+    padding: 0.75rem 0.5rem;
+}
+
+.songRow .songRow-firstCol, .songRow .songRow-lestCol {
+    display: flex;
+    gap: 1rem;
+}
+
+.songRow svg {
+    cursor: pointer;
+}
+
+.songRow .songRow-lestCol {
+    padding-right: 1rem;
+}
+
+.songRow td:nth-child(2), .songRow td:nth-child(3) {
+    /* when table colummn become smaller then 15ch remove extra letters and replace with "..."  */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 15ch;
+}
